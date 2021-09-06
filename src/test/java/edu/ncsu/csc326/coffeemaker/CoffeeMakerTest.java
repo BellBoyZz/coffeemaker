@@ -315,4 +315,14 @@ public class CoffeeMakerTest {
 		int change = coffeeMaker.makeCoffee(10, 100);
 		assertEquals(100, change);
 	}
+
+	/**
+	 * Make a coffee with null recipe
+	 * Then we get our money back.
+	 */
+	@Test
+	public void testMakeCoffeeWithNullRecipe() {
+		int change = coffeeMaker.makeCoffee(0, 100);
+		assertEquals(100, change);
+	}
 }
